@@ -1,20 +1,12 @@
-{
-"name": "Important",
-"version": "1.0.0",
-"description": "",
-"scripts": {
-"build": "echo \"No build specified\" && exit 1",
-"test": "echo \"No test specified\" && exit 1",
-"start": "node index.js"
-},
-"repository": {
-"type": "git",
-"url": "git+https://github.com/CsChinmay/Important.git"
-},
-"author": "",
-"license": "ISC",
-"bugs": {
-"url": "https://github.com/CsChinmay/Important/issues"
-},
-"homepage": "https://github.com/CsChinmay/Important#readme"
-}
+if [ -z $UPSTREAM_REPO ]
+then
+  echo "Cloning main Repository"
+  git clone https://github.com/CsChinmay/Important /Eva
+else
+  echo "Cloning Custom Repo from $UPSTREAM_REPO "
+  git clone $UPSTREAM_REPO /Eva
+fi
+cd /Eva
+pip3 install -U -r requirements.txt
+echo "Starting Bot...."
+python3 bot.py
