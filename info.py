@@ -73,13 +73,13 @@ URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '8eb4c42da2fd
 
      # Auto Delete For Group Message (Self Delete) #
 SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 300))
-SELF_DELETE = environ.get('SELF_DELETE', True)
+SELF_DELETE = environ.get('SELF_DELETE', False)
 if SELF_DELETE == "True":
     SELF_DELETE = True
 
     # Download Tutorial Button #
 DOWNLOAD_TEXT_NAME = "📥 HOW TO DOWNLOAD 📥"
-DOWNLOAD_TEXT_URL = "https://t.me/download_from_search_zone_bot"
+DOWNLOAD_TEXT_URL = "https://t.me/AtwoZ_movies/13"
 
    # Custom Caption Under Button #
 CAPTION_BUTTON = "Subscribe"
